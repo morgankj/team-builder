@@ -4,7 +4,7 @@ const MemberForm = ({ formValues, updateForm, submitForm }) => {
 
     const onChange = event => {
         const inputName = event.target.name;
-        const { inputValue } = event.target;
+        const inputValue = event.target.value;
         updateForm(inputName, inputValue);
     }
     
