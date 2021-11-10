@@ -6,7 +6,7 @@ const Member = ({ details }) => {
     }
 
     return (
-        <div className='member container'>
+        <div className='member container' key={details.name}>
             <h2>{details.name}</h2>
             <p>Email: {details.email}</p>
             <p>Role: {details.role}</p>

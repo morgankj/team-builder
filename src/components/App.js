@@ -1,6 +1,7 @@
 import '../App.css';
+import '../reset.css';
 
-import { React, useState, useEffect } from 'react';
+import { React, useState } from 'react';
 import MemberForm from './MemberForm';
 import Member from './Member';
 // import axios from 'axios';
@@ -14,7 +15,7 @@ const initialFormValues = {
 function App() {
   const [members, setMembers] = useState([]);
   const [formValues, setFormValues] = useState(initialFormValues);
-  // const [formErrors, setFormErrors] = useState("");
+  const [formErrors, setFormErrors] = useState("");
 
   const updateForm = (inputName, inputValue) => {
     setFormValues({ ...formValues, [inputName]: inputValue});
@@ -27,8 +28,13 @@ function App() {
       role: formValues.role
     }
 
+    if (newMember.name.length > 20) {
+      setFormErrors("Please enter a name of 20 characters or less.");
+      return;
+    }
+
     setMembers([newMember, ...members ]);
-    // setFormErrors("");
+    setFormErrors("");
     setFormValues(initialFormValues);
   }
 
@@ -38,9 +44,10 @@ function App() {
         <h1>Team Members</h1>
         <p>Fill out the form below and click "SUBMIT" to add a member to your team!</p>
       </header>
-      {/* <h3 className="error-text">{formErrors}</h3> */}
+      <h3 className="error-text">{formErrors}</h3>
       <MemberForm formValues={formValues} updateForm={updateForm} submitForm={submitForm} />
-      {members.map(member => (<Member key={member.id} details={member} /> ))}
+      <p className="memberHeader">Active Members:</p>
+      {members.map(member => (<Member key={member.name} details={member} /> ))}
     </div>
   );
 }

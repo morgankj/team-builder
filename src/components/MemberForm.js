@@ -22,6 +22,7 @@ const MemberForm = ({ formValues, updateForm, submitForm }) => {
                         name='name'
                         value={formValues.name}
                         onChange={onChange}
+                        maxLength='20'
                     />
                 </label>
                 <label>Email
@@ -36,8 +37,8 @@ const MemberForm = ({ formValues, updateForm, submitForm }) => {
                     <select value={formValues.role} name='role' onChange={onChange}>
                         <option value=''>-- Select a Role --</option>
                         <option value='Backend Engineer'>Backend Engineer</option>
-                        <option value='Frontend Engineer'>Frontend Engineer</option>
                         <option value='Designer'>Designer</option>
+                        <option value='Frontend Engineer'>Frontend Engineer</option>
                         <option value='Other'>Other</option>
                     </select>
                 </label>

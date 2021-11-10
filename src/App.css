@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-/* .App-header {
+.App-header {
   background-color: #883e6c;
   display: flex;
   flex-direction: column;
@@ -10,9 +10,70 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-} */
+}
 
 .App-link {
   color: #61dafb;
 }
 
+header {
+  background-image: url('./images/fire.jpeg');
+  line-height: 1;
+  padding: 2%;
+  text-shadow: 3px 2px 3px rgba(17, 0, 0, 0.9);
+}
+
+h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: 8rem;
+}
+
+.form-container, .member.container {
+  padding: 2%;
+  margin-bottom: 1%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  margin-left: .5%;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Commented out so that the "disabled" functionality would come through */
+/* .submit button {
+  background-color: rgb(17, 0, 0);
+  color: white;
+  padding: .5% 1%;
+  margin: 1%;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit button:hover {
+  background-color: rgb(100, 20, 20);
+} */
+
+.memberHeader {
+  font-family: 'Teko', sans-serif;
+  font-size: 5rem;
+  background-image: url('./images/fire.jpeg');
+  background-repeat: repeat;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.member.container {
+  background: rgb(17, 0, 0);
+  width: 30%;
+  margin: 0 auto 2%;
+  border-radius: 8px;
+  color: white;
+}
