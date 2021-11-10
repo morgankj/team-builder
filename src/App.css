@@ -23,9 +23,16 @@ header {
   text-shadow: 3px 2px 3px rgba(17, 0, 0, 0.9);
 }
 
-h1 {
+h1, h2, .memberHeader {
   font-family: 'Teko', sans-serif;
+}
+
+h1 {
   font-size: 8rem;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 .form-container, .member.container {
@@ -46,8 +53,15 @@ label {
   font-weight: bold;
 }
 
-/* Commented out so that the "disabled" functionality would come through */
-/* .submit button {
+.submit button:disabled {
+  background-color: rgb(194, 194, 194);
+}
+
+.submit button:disabled:hover {
+  background-color: rgb(194, 194, 194);
+}
+
+.submit button {
   background-color: rgb(17, 0, 0);
   color: white;
   padding: .5% 1%;
@@ -58,10 +72,9 @@ label {
 
 .submit button:hover {
   background-color: rgb(100, 20, 20);
-} */
+}
 
 .memberHeader {
-  font-family: 'Teko', sans-serif;
   font-size: 5rem;
   background-image: url('./images/fire.jpeg');
   background-repeat: repeat;
